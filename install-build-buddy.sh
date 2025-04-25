@@ -5,6 +5,17 @@ REPO_URL="https://github.com/antoniolazaro/build-buddy.git"
 INSTALL_DIR="/usr/local/build-buddy"
 BIN_PATH="/usr/local/bin/build-buddy"
 
+# Remove existing installation if it exists
+if [ -d "$INSTALL_DIR" ]; then
+  echo "Removing existing installation..."
+  rm -rf "$INSTALL_DIR"
+fi
+
+if [ -f "$BIN_PATH" ]; then
+  echo "Removing existing executable..."
+  rm -f "$BIN_PATH"
+fi
+
 # Clone the repository
 echo "Cloning repository..."
 git clone "$REPO_URL" "$INSTALL_DIR" || { echo "Failed to clone repository."; exit 1; }

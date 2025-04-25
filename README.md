@@ -36,7 +36,7 @@ This script will:
 1. Build the project:  
 1. mvn clean package
 1. Create a script to run the CLI as a system command:  
-1. Linux/Mac: Create a build-buddy.sh file in the project root with the following content:
+1. Linux/Mac: Create a build-buddy.sh file in the project root with the following content or copy the script *_build-buddy.sh_* from the repository:
 ```bash 
 #!/bin/bash
 java -jar "$(dirname "$0")/target/build-buddy-1.0-SNAPSHOT.jar" "$@"
