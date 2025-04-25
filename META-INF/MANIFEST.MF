@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven 3.8.6
+Built-By: popete
+Build-Jdk: 21.0.2
+Main-Class: org.build.buddy.Main
+
