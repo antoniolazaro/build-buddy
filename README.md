@@ -76,5 +76,8 @@ Contributions are welcome! Please follow these steps:
 1. Create a new branch for your feature or bug fix.
 1. Submit a pull request.
 
+## Sponsoring
+<iframe src="https://github.com/sponsors/antoniolazaro/card" title="Sponsor antoniolazaro" height="225" width="600" style="border: 0;"></iframe>
+
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
