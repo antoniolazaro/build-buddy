@@ -22,14 +22,13 @@ public final class GradleEditor {
         String depToAdd = "    implementation '%s:%s:%s'".formatted(groupId, artifactId, version);
 
         for (String line : lines) {
-            newLines.add(line);
 
             // Identifica início do bloco dependencies
             if (line.trim().startsWith("dependencies")) {
                 inDependencies = true;
+                newLines.add(line);
                 continue;
             }
-
             // Adiciona a dependência no final do bloco
             if (inDependencies && line.trim().equals("}")) {
                 if (!added) {
@@ -38,6 +37,7 @@ public final class GradleEditor {
                 }
                 inDependencies = false;
             }
+            newLines.add(line);
         }
 
         // Se não encontrou o bloco, adiciona no final
